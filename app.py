@@ -117,7 +117,16 @@ def login():
 def logout():
     """Handle logout of user."""
 
-    # IMPLEMENT THIS
+    # Check if the user is logged in
+
+    if g.user:
+        # Logout the user by removing the user ID from the session
+        do_logout()
+        flash("You have been logged out successfully.", "success")
+    else:
+        flash("You are not logged in.", "danger")
+
+    return redirect('/login')
 
 
 ##############################################################################
