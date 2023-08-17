@@ -19,7 +19,7 @@ app = Flask(__name__)
 # if not set there, use development local db.
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
     "DATABASE_URL",
-    f"postgresql://postgres:{os.environ.get('DB_PASSWORD')}@localhost/warbler",
+    "postgres://hxkymmaa:tfIk4OtXlYQ1NrtMW7EaR7j_tqCrVt2r@bubble.db.elephantsql.com/hxkymmaa",
 )
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
